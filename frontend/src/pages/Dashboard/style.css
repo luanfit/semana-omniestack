@@ -1,4 +1,4 @@
-ul.spot-list{
+ul.spot-list {
     width:  100%;
     list-style: none;
     display: grid;
@@ -7,7 +7,7 @@ ul.spot-list{
     margin-bottom: 30px;
 }
 
-ul.spot.list li{
+ul.spot.list li {
     display: flex;
     flex-direction: column;
 }
@@ -17,4 +17,15 @@ ul.spot.list li header {
     height: 120px;
     background-size: cover;
     border-radius: 4px;
+}
+
+ul.spot-list li strong {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #444;
+}
+   
+  ul.spot-list li span {
+    font-size: 15px;
+    color: #999;
 }

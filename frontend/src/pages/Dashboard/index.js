@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
 
+import './style.css'
+
 export default function Dashboard() {
     const [spots, setSpots] = useState([]);
 
-    useEffect(()=> {
+    useEffect(() => {
         async function loadSpots() {
             const user_id = localStorage.getItem('user');
             const response = await api.get('/dashboard', {
@@ -18,10 +20,10 @@ export default function Dashboard() {
     }, []);
     return (
         <>
-            <ul className='spot-list'>
+            <ul className="spot-list">
                 {spots.map(spot => (
                     <li key={spot._id}>
-                        <header />
+                        <header style={{ backgroundImage: `url(${spot.thumbnail_url})`}} />
                         <strong>{spot.company}</strong>
                         <span>{spot.price}</span>
                     </li>
